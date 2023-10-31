@@ -1,12 +1,27 @@
 <html>
   <head>
     <script type="text/javascript">
-      const R = parseFloat(prompt("Ingresar R"));
-      const L = parseFloat(prompt("ingresar L"));
-      const C = parseFloat(prompt("ingresar C"));
-      const F = parseFloat(prompt("ingresar F"));
 
-      const XL = 2 * math.PI * F * L;
+	<!-- 
+
+function calculateNoseAmigo() {
+      var R = parseFloat(prompt("Ingresar R"));
+      var L = parseFloat(prompt("ingresar L"));
+      var C = parseFloat(prompt("ingresar C"));
+      var F = parseFloat(prompt("ingresar F"));
+      var resultadoXL = calcularXL(R, L, C, F);
+
+   document.write("XL:" + XL + "<br>");
+}
+
+      function calcularXL(R, L, C, F) {
+      return Math.(2 * 3.14 * F * L );
+//-->
     </script>
   </head>
+<body>
+<form>
+<input type="button" onclick="calculateNoseAmigo()" value="Resultado">
+</form>
+</body>
 </html>
