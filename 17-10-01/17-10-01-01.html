@@ -7,14 +7,13 @@ function calcularResultados() {
   const C = parseFloat(document.getElementById("c").value);
   const F = parseFloat(document.getElementById("f").value);
 
-  function calcularXL() {
-    return 2 * Math.PI * F * L;
+   function calcularXC() {
+    return 1 / (2 * Math.PI * F * C);
   }
 
-  const XL = calcularXL();
+  const XC = calcularXC(); 
 
-  document.getElementById("xl_result").innerHTML = XL: ${XL};
- }
+  document.getElementById("xc_result").innerHTML = `XC: ${XC}`;
 
 </script>
 
@@ -44,7 +43,7 @@ background-color: #F5F5DC;
 </form>
 
 <h2>Resultados:</h2>
-<div id="xl_result"></div>
+<div id="xc_result"></div>
 
 </body>
 </html>
