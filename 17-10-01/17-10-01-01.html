@@ -1,27 +1,50 @@
 <html>
-  <head>
-    <script type="text/javascript">
+<head>
+<script type="text/javascript">
+function calcularResultados() {
+  const R = parseFloat(document.getElementById("r").value);
+  const L = parseFloat(document.getElementById("l").value);
+  const C = parseFloat(document.getElementById("c").value);
+  const F = parseFloat(document.getElementById("f").value);
 
-	<!-- 
+  function calcularXL() {
+    return 2 * Math.PI * F * L;
+  }
 
-function calculateNoseAmigo() {
-      var R = parseFloat(prompt("Ingresar R"));
-      var L = parseFloat(prompt("ingresar L"));
-      var C = parseFloat(prompt("ingresar C"));
-      var F = parseFloat(prompt("ingresar F"));
-      var resultadoXL = calcularXL(R, L, C, F);
+  const XL = calcularXL();
 
-   document.write("XL:" + XL + "<br>");
+  document.getElementById("xl_result").innerHTML = XL: ${XL};
+ }
+
+</script>
+
+<style>
+ body {
+background-color: #F5F5DC;
 }
+</style>
 
-      function calcularXL(R, L, C, F) {
-      return Math(2 * 3.14 * F * L );
-//-->
-    </script>
-  </head>
+</head>
 <body>
+<h1>Cálculo de Propiedades Eléctricas</h1>
 <form>
-<input type="button" onclick="calculateNoseAmigo()" value="Resultado">
+  <label for="r">R:</label>
+  <input type="text" id="r" name="r"><br><br>
+
+  <label for="l">L:</label>
+  <input type="text" id="l" name="l"><br><br>
+
+  <label for="c">C:</label>
+  <input type="text" id="c" name="c"><br><br>
+
+  <label for="f">F:</label>
+  <input type="text" id="f" name="f"><br><br>
+
+  <input type="button" value="Calcular" onclick="calcularResultados()">
 </form>
+
+<h2>Resultados:</h2>
+<div id="xl_result"></div>
+
 </body>
 </html>
