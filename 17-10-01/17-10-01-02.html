@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript">
+function calcularResultados() {
+  const R = parseFloat(document.getElementById("r").value);
+  const L = parseFloat(document.getElementById("l").value);
+  const C = parseFloat(document.getElementById("c").value);
+  const F = parseFloat(document.getElementById("f").value);
+
+function calcularXC() {
+    return 1 / (2 * Math.PI * F * C);
+  }
+
+   const XC = calcularXC();
+
+   document.getElementById("xc_result").innerHTML = `XC: ${XC}`;
