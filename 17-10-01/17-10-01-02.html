@@ -14,3 +14,33 @@ function calcularXC() {
    const XC = calcularXC();
 
    document.getElementById("xc_result").innerHTML = `XC: ${XC}`;
+
+  }
+</script>
+  
+<style>
+ body {
+background-color: #f0077b;
+}
+</style>
+  
+</head>
+<body>
+<h1>Cálculo de Propiedades Eléctricas</h1>
+<form>
+  <label for="r">R:</label>
+  <input type="text" id="r" name="r"><br><br>
+
+  <label for="l">L:</label>
+  <input type="text" id="l" name="l"><br><br>
+
+  <label for="c">C:</label>
+  <input type="text" id="c" name="c"><br><br>
+
+  <label for="f">F:</label>
+  <input type="text" id="f" name="f"><br><br>
+
+  <input type="button" value="Calcular" onclick="calcularResultados()">
+</form>
+
+<h2>Resultados:</h2>
