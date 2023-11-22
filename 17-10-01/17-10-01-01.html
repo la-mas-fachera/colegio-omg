@@ -7,20 +7,20 @@ function calcularResultados() {
   const C = parseFloat(document.getElementById("c").value);
   const F = parseFloat(document.getElementById("f").value);
 
-   function calcularXC() {
+  function calcularXC() {
     return 1 / (2 * Math.PI * F * C);
   }
 
   const XC = calcularXC(); 
 
   document.getElementById("xc_result").innerHTML = `XC: ${XC}`;
-
+}
 </script>
 
 <style>
  body {
-background-color: #F5F5DC;
-}
+  background-color: #FBE3E3;
+ }
 </style>
 
 </head>
@@ -45,5 +45,6 @@ background-color: #F5F5DC;
 <h2>Resultados:</h2>
 <div id="xc_result"></div>
 
+<br> <a href=" https://la-mas-fachera.github.io/colegio-omg/17-10-01/index.html">volver</a>
 </body>
 </html>
