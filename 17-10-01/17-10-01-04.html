@@ -7,24 +7,33 @@ function calcularResultados() {
   const C = parseFloat(document.getElementById("c").value);
   const F = parseFloat(document.getElementById("f").value);
 
-   function calcularPhi() {
-    const XL = calcularXL();
-    const XC = calcularXC();
-    return Math.atan((XL - XC) / R);
+  function calcularXC() {
+    return 1 / (2 * Math.PI * F * C);
   }
 
-   const phi = calcularPhi();
+  function calcularXL() {
+    return 2 * Math.PI * F * L;
+  }
 
-   document.getElementById("phi_result").innerHTML = `Ángulo de fase (phi): ${phi}`;
+  function calcularPhi() {
+    const XL = calcularXL();
+    const XC = calcularXC();
+    const atanResult = Math.atan((XL - XC) / R);
+    return atanResult * (180 / Math.PI);
+  }
 
-  </script>
-  
+  const phi = calcularPhi();
+
+  document.getElementById("phi_result").innerHTML = `Ángulo de fase (phi): ${phi} grados`;
+}
+</script>
+
 <style>
  body {
-background-color: #ffb391;
-}
+  background-color: #FBE3E3;
+ }
 </style>
-  
+
 </head>
 <body>
 <h1>Cálculo de Propiedades Eléctricas</h1>
@@ -46,5 +55,10 @@ background-color: #ffb391;
 
 <h2>Resultados:</h2>
 <div id="phi_result"></div>
+  
+  <br> <a href=" https://la-mas-fachera.github.io/colegio-omg/17-10-01/index.html">volver</a>
+  
 </body>
 </html>
+
+
