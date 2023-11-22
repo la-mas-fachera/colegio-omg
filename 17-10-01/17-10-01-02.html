@@ -7,21 +7,21 @@ function calcularResultados() {
   const C = parseFloat(document.getElementById("c").value);
   const F = parseFloat(document.getElementById("f").value);
 
-function calcularXC() {
+  function calcularXC() {
     return 1 / (2 * Math.PI * F * C);
   }
 
-   const XC = calcularXC();
+  const XC = calcularXC();
 
-   document.getElementById("xc_result").innerHTML = `XC: ${XC}`;
 
-  }
+  document.getElementById("resultado_xc").innerHTML = `XC: ${XC}`;
+}
 </script>
   
 <style>
  body {
-background-color: #ffb391;
-}
+  background-color: #FBE3E3;
+ }
 </style>
   
 </head>
@@ -44,8 +44,9 @@ background-color: #ffb391;
 </form>
 
 <h2>Resultados:</h2>
+<div id="resultado_xc"></div>
 
-  <br> <a href="https://la-mas-fachera.github.io/colegio-omg/17-10-01/index.html">Volver</a>
+<br> <a href="https://la-mas-fachera.github.io/colegio-omg/17-10-01/index.html">Volver</a>
   
 </body>
 </html>
