@@ -7,7 +7,15 @@ function calcularResultados() {
   const C = parseFloat(document.getElementById("c").value);
   const F = parseFloat(document.getElementById("f").value);
 
-    function calcularModuloZ() {
+  function calcularXC() {
+    return 1 / (2 * Math.PI * F * C);
+  }
+
+  function calcularXL() {
+    return 2 * Math.PI * F * L;
+  }
+
+  function calcularModuloZ() {
     const XL = calcularXL();
     const XC = calcularXC();
     return Math.sqrt(Math.pow(R, 2) + Math.pow(XL - XC, 2));
@@ -16,15 +24,15 @@ function calcularResultados() {
   const moduloZ = calcularModuloZ();
 
   document.getElementById("modulo_z_result").innerHTML = `Módulo de Z: ${moduloZ}`;
+}
+</script>
 
-  </script>
-  
 <style>
  body {
-background-color: #ffb391;
-}
+  background-color: #ffb391;
+ }
 </style>
-  
+
 </head>
 <body>
 <h1>Cálculo de Propiedades Eléctricas</h1>
@@ -46,5 +54,8 @@ background-color: #ffb391;
 
 <h2>Resultados:</h2>
 <div id="modulo_z_result"></div>
+
+<br> <a href="https://la-mas-fachera.github.io/colegio-omg/17-10-01/index.html">Volver</a>
+
 </body>
 </html>
