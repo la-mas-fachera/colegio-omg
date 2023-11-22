@@ -25,6 +25,16 @@
       return Ep;
     }
 
+    function calcularVelocidadAlSuelo(Ep, m) {
+      const v = Math.sqrt((2 * Ep) / m);
+
+      if (v > 100) {
+        return `Rapido, La velocidad al tocar el suelo es ${v} m/s`;
+      } else {
+        return `Lento, La velocidad al tocar el suelo es ${v} m/s`;
+      }
+    }
+
     function pedirDatos() {
       const masa = parseFloat(document.getElementById("masa").value);
       const altura = parseFloat(document.getElementById("altura").value);
