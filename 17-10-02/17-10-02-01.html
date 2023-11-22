@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Cálculo de EP y  V</title>
+</head>
+<body>
+  <h1>Cálculo de EP y V 
+</h1>
+  <form>
+    <label for="masa">Masa (kg):</label>
+    <input type="text" id="masa" name="masa"><br><br>
+
+    <label for="altura">Altura (metros):</label>
+    <input type="text" id="altura" name="altura"><br><br>
+
+    <input type="button" value="Calcular" onclick="pedirDatos()">
+  </form>
+
+  <h2>Resultado:</h2>
+  <div id="resultado"></div>
+
+  <script type="text/javascript">
+    function calcularEp(m, h) {
+      const g = 9.81;
+      const Ep = m * g * h;
+      return Ep;
+    }
+
+    function pedirDatos() {
+      const masa = parseFloat(document.getElementById("masa").value);
+      const altura = parseFloat(document.getElementById("altura").value);
+      const resultadoDiv = document.getElementById("resultado");
+
+      if (!isNaN(masa) && !isNaN(altura)) {
+        const Ep = calcularEp(masa, altura);
+        const resultado = calcularVelocidadAlSuelo(Ep, masa);
+        resultadoDiv.innerHTML = resultado;
+      } else {
+        resultadoDiv.innerHTML = "ingresar valores numéricos válidos.";
+      }
+    }
+  </script>
+<style>
+ body {
+background-color: #FBE3E3;
+}
+</style>
+</body>
+</html>
